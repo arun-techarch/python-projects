@@ -1,12 +1,12 @@
 # python-projects
 🚀 A comprehensive Python learning and development playground covering end-to-end web and API development. This repository demonstrates how to build scalable applications with:
 
-✅ Environment configuration & structured logging
-✅ In-memory storage, RDBMS, and NoSQL databases
-✅ ORM integrations for efficient data handling
-✅ Message queues for async communication
-✅ Flask-based websites and REST APIs with database support
-✅ Task schedulers & dashboards for real-world workflows
+- ✅ Environment configuration & structured logging
+- ✅ In-memory storage, RDBMS, and NoSQL databases
+- ✅ ORM integrations for efficient data handling
+- ✅ Message queues for async communication
+- ✅ Flask-based websites and REST APIs with database support
+- ✅ Task schedulers & dashboards for real-world workflows
 
 Designed with multiple hands-on use cases, this repo is perfect for anyone looking to strengthen their skills in Python backend engineering and gain expertise in modern web development practices.
 
