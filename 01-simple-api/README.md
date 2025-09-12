@@ -9,8 +9,8 @@ Follow these steps to create a new project from scratch:
 1. Create a new project folder
 
     ```sh
-    mkdir my_fastapi_project
-    cd my_fastapi_project
+    mkdir simple-api
+    cd simple-api
     ```
 2. Create and activate a virtual environment
 
