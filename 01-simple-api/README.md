@@ -1,4 +1,4 @@
-# FastAPI Project Setup Guide
+## FastAPI Project Setup Guide
 
 This guide provides step-by-step instructions for creating and setting up a FastAPI project using a virtual environment.
 
