@@ -1,0 +1,26 @@
+{
+  "oracle": [
+    {
+      "host": "localhost",
+      "port": 1521,
+      "service_name": "FREE",
+      "username": "SYSTEM",
+      "password": "Admin@123"
+    },
+    {
+      "host": "localhost",
+      "port": 1522,
+      "service_name": "FREE",
+      "username": "SYSTEM",
+      "password": "Admin@456"
+    }
+  ],
+
+  "email": {
+    "smtp_server": "smtp.gmail.com",
+    "port": 587,
+    "app_password": "app password",
+    "sender": "sender@gmail.com",
+    "recipient": "recipient@gmail.com"
+  }
+}
