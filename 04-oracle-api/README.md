@@ -1,14 +1,21 @@
-# Project Setup and Deployment Guide
-This project provides an end-to-end setup, including code configuration, Oracle DB connectivity, Docker image creation, and deployment. 
+## Production-Ready FastAPI Application with Oracle Integration
+This project provides a production-ready folder structure for building scalable and maintainable APIs using FastAPI. The application is modularized into configurations, routers, services, and centralized logging, ensuring clean separation of concerns and easy extensibility.
 
-Follow the steps below in sequence to successfully set up and test the application.
+It supports a product and sub-resource API structure (e.g., reviews), with built-in data validation and persistence to an Oracle database.
+
+Key features include:
+- Organized project layout for production readiness
+- Centralized logging for monitoring and debugging
+- Product and review API endpoints
+- Oracle database integration with data verification
+- Interactive API documentation using Swagger (OpenAPI)
+- Application execution via Uvicorn
 
 ### Steps Overview
 1. Oracle DB Setup in Docker  
 2. Database Schema - Product & Reviews Table  
 3. Project Setup and Run the project  
-4. Test the API
-5. Review Container Logs  
+4. Test the API 
 
 ### 1. Oracle Database Setup (Docker)
 
@@ -73,14 +80,6 @@ docker logs -f oracle-db
 4. Click Test — you should see Status: Success.
 5. Click Connect to open a SQL Worksheet.
 
-> If SQL Developer cannot connect from the host to localhost:1521, check:
-
-> Is the container running? (docker ps)
-
-> Did you map port 1521 (e.g. -p 1521:1521)?
-
-> Any local firewall blocking 1521?
-
 #### 7. Clean up
 
 Stop and remove container and volumes:
@@ -105,8 +104,6 @@ This schema is designed to manage products and their reviews.
 | DESCRIPTION | TEXT         | NULLABLE                | Detailed description of product   |
 | PRICE       | DECIMAL(10,2)| NOT NULL                | Price of the product              |
 
----
-
 #### 2. PRODUCT_REVIEW Table
 
 | Column Name | Data Type     | Constraints                                  | Description                          |
@@ -117,8 +114,6 @@ This schema is designed to manage products and their reviews.
 | COMMENT_BY  | VARCHAR(100) | NULLABLE                                     | Name of the reviewer                 |
 | COMMENT_ON  | DATETIME     | DEFAULT CURRENT_TIMESTAMP                    | Timestamp when comment was created   |
 | PRODUCT_ID  | INT          | FOREIGN KEY → PRODUCT(ID)                    | Associated product identifier        |
-
----
 
 ### 📌 Queries to create and populate the data into tables
 
@@ -191,7 +186,7 @@ SELECT * FROM PRODUCT_REVIEW;
 | 5  | Very comfortable to wear         | 4      | Karthik    | 2025-09-12 14:15:00 | 3 |
 | 6  | Perfect for workouts             | 5      | Divya      | 2025-09-12 14:20:00 | 4 |
 
-### 3. Project Setup
+### 3. Project Setup and Run the project
 Clone the repository and set up the environment.
 
 ```bash
@@ -361,9 +356,4 @@ Response:
     "comment_by": "Andrino"
   }
 ]
-```
-## 6. Review Container Logs
-Check logs to validate application behavior:
-```sh
-docker logs <container_id>
 ```
